@@ -570,7 +570,7 @@ function processNewData(allItems){
   for(let i=0;i<allItems.length;i++){const item=allItems[i];const key=String(item.id);if(!state.seenIds.has(key)){state.seenIds.add(key);state.submissions.push(item);newItems.push(item);}}
   let total=0;for(let i=0;i<allItems.length;i++)total+=allItems[i].amount;
   state.prevTotalAmount=state.totalAmount;state.totalAmount=total;
-  const count=allItems.length;const avg=count>0?Math.round(total/count):0;const latest=allItems[allItems.length-1];
+  const count=allItems.length;const avg=count>0?Math.round(total/count):0;const latest=allItems[0];
 
   updateOdometer('totalAmount',total);
   animateNumber('totalSupporters',count);animateNumber('avgAmount',avg,true);animateNumber('heroCount',count);
