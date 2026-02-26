@@ -22,7 +22,7 @@
  * ╚══════════════════════════════════════════════════════════════╝
  */
 
-const XCEL_CONFIG = {
+window.XCEL_CONFIG = {
 
   // ─── API ENDPOINT ──────────────────────────────────────────
   // Your API URL that returns JSON with submission data
@@ -117,7 +117,7 @@ const XCEL_CONFIG = {
  * └──────────────────────────────────────────────────────────────┘
  */
 function mapApiResponse(raw) {
-  const FM = XCEL_CONFIG.FIELD_MAP;
+  const FM = window.XCEL_CONFIG.FIELD_MAP;
 
   // 1. Extract the submissions array
   let items;
